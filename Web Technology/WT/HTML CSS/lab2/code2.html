@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>20051902</title>
+    <style>
+      fieldset {
+        margin-bottom: 20px;
+      }
+      .inputArea {
+        margin: 12px 0;
+        display: block;
+      }
+      .requiredStar:after {
+        color: red;
+        content: " * ";
+      }
+      .passText {
+        display: block;
+        font-size: 13px;
+      }
+      .address {
+        display: block;
+      }
+      .perinfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .dpimg {
+        height: 280px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .dpimg img {
+        width: 200px;
+      }
+      .submit{
+          margin-bottom: 20px;
+          width: 120px;
+          height: 40px;
+          border-radius: 10px;
+          outline: none;
+          border: 1px black solid;
+      }
+    </style>
+  </head>
+  <body>
+    <center><h1>Registration Form</h1></center>
+    <form method="POST">
+      <fieldset>
+        <legend>Create User Id and Password</legend>
+        <div class="inputArea">
+          <span class="requiredStar">User id: </span>
+          <input type="text" placeholder="Your email id" required />
+        </div>
+        <div class="inputArea">
+          <span class="requiredStar">Password: </span>
+          <input type="password" placeholder="Your password" required />
+          <span class="passText">
+            Password should have atleast one alphabet, number and special
+            character; Min 8 characters max 16 characters
+          </span>
+        </div>
+        <div class="inputArea">
+          <span class="requiredStar">Confirm Password: </span>
+          <input
+            type="password"
+            placeholder="Write the same password"
+            required
+          />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>PERSONAL INFORMATION</legend>
+        <div class="perinfo">
+          <div>
+            <div class="inputArea">
+              <span class="requiredStar">First Name: </span>
+              <input type="text" placeholder="Enter first name" required />
+            </div>
+            <div class="inputArea">
+              <span>Last Name: </span>
+              <input type="text" placeholder="Enter Last name" />
+            </div>
+            <div class="inputArea">
+              <span>Gender: </span>
+              <input type="radio" name="male" /> Male
+              <input type="radio" name="female" /> Female
+            </div>
+            <div class="inputArea">
+              <span class="requiredStar">Birthday: </span>
+              <input type="date" name="dob" />
+            </div>
+            <div class="inputArea">
+              <span>Country: </span>
+              <input type="text" placeholder="Enter your country name" />
+            </div>
+            <div class="inputArea">
+              <span class="requiredStar">E-mail: </span>
+              <input type="email" placeholder="Enter your email" required />
+            </div>
+            <div class="inputArea">
+              <span class="address">Address: </span>
+              <textarea name="address" id="" cols="35" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="dpimg">
+            <img src="./mydp.gif" alt="mydp" />
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>EDUCATIONAL DETAILS</legend>
+        <div class="inputArea">
+          <span>Degree: </span>
+          <input list="degrees" placeholder="Select degree" />
+          <datalist id="degrees">
+            <option value="BE"></option>
+            <option value="BSC"></option>
+            <option value="MSC"></option>
+            <option value="MTECH"></option>
+          </datalist>
+        </div>
+        <div class="inputArea">
+          <span class="address">Certified Courses (if any): </span>
+          <textarea name="address" id="" cols="35" rows="5"></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>WORK EXPERIENCE</legend>
+        <div class="inputArea">
+          <span>Knowledge in: </span>
+          <input type="checkbox" name="male" /> HTML
+          <input type="checkbox" name="female" /> .NET
+          <input type="checkbox" name="male" /> JAVA
+          <input type="checkbox" name="female" /> PHP
+        </div>
+        <div class="inputArea">
+          <span>Years of Experience: </span>
+          <input type="text" placeholder="Enter Years of Experience" />
+          
+        </div>
+      </fieldset>
+      <center><input type="submit" value="Submit" class="submit" /></center>
+    </form>
+  </body>
+</html>
